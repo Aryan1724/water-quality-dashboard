@@ -69,7 +69,7 @@ def tiny_glossary():
 import os
 
 default_path = os.environ.get("WQ_EXCEL_PATH", str(Path.cwd().parent / "wq_project" / "data" / "DENZA 31 POINTS DATA 2020-2024 PHD.xlsx"))
-excel_path = st.sidebar.text_input("Path to Excel file", value=default_path)
+excel_path = st.sidebar.text_input("Path to Excel file", "data/DENZA 31 POINTS DATA 2020-2024 PHD.xlsx")
 scope = st.sidebar.selectbox("Scope (choose 'NO_STP' to hide inlet/STP stations)", options=["ALL","NO_STP"], index=0)
 param = st.sidebar.selectbox("Parameter", options=["Fecal_Coliform","Turbidity"], index=0)
 
